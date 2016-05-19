@@ -1,0 +1,10 @@
+{
+  "name": "ETBNoSEVende",
+  "private": "true",
+  "devDependencies": {
+    "jquery": "^2.2.3",
+    "spin.js": "^2.3.2",
+    "bootstrap-sass": "^3.3.6",
+    "components-font-awesome": "^4.6.3"
+  }
+}
