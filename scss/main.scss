@@ -1,0 +1,257 @@
+// The path for our ionicons font files, relative to the built CSS in www/css
+$fa-font-path: "../lib/components-font-awesome/fonts" !default;
+
+// Include font-awesome
+@import "www/lib/components-font-awesome/scss/font-awesome";
+
+@import "www/lib/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "www/lib/bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+    margin: 0;
+        text-align: center;
+        font-family: Roboto;
+        color: #444;
+}
+
+h1 {
+    font-size: 20px;
+    
+    span {
+        font-size: 2em;
+        color: #E4513C;
+        margin-right: 10px;
+    }
+}
+
+.row {
+    
+    > div {
+        margin: 40px 0;
+    }
+    
+    > .col-md-8 {
+        padding: 0px;
+    }
+    
+    i {
+        font-size: 2em;
+        color: #333;
+    }
+}
+
+#canvas {
+        border:1px solid #d3d3d3;
+        display: block;
+        margin: 0 auto;
+}
+
+a, button {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+}
+
+button {
+    border: none;
+    width: 100%;
+}
+            
+#export, #back {
+    padding: 16px 30px;
+    margin: 10px;
+    border-color: #E4513C;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #E4513C;
+    
+    i {
+        font-size: 1em;
+        color: #fff;
+    }
+}
+
+#back {
+    background-color: #058BBF;
+    border-color: #058BBF;
+}
+
+#export {
+    
+    &:hover {
+        border-color: #E4513C;
+        background-color: #E4513C;
+    }
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    
+    input.upload {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}
+
+#loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    
+    #progress {
+        display: none;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #E4513C;
+    }
+}
+
+#share {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #058BBF;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 100000;
+
+    li {
+        float: left;
+        width: 20%;
+        vertical-align: middle;
+        
+        a {
+            font-size: 20px;
+            color: #fff;
+            padding: 10px;
+            display: block;
+
+            &:hover, &:active {
+                font-size: 30px;
+            }
+
+            &[data-network=twitter] {    
+                background: #6cdfea;
+            }
+
+            &[data-network=facebook] {    
+                background: #3b5998;
+            }
+
+            &[data-network=google-plus] {    
+                background: #e34429;
+            }
+
+            &[data-network=email] {    
+                background: #42c5b0;
+            }
+        }
+    }
+
+    .share-title {
+        font-size: 10px;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-weight: 700;
+        
+        i.fa {
+            font-size: 25px;
+            color: #fff;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+    } 
+}
+
+.facebook-event, .twitter-hash {
+    background-color: #0D47A1;
+    color: #eee;
+    padding: 5px;
+    display: block;
+    width: auto;
+    border-radius: 3px;
+}
+
+.twitter-hash {
+    background-color: #77c7f7;
+}
+
+.facebook-event:hover, .facebook-event:active, .twitter-hash:hover, .twitter-hash:active {
+    color: #fff;
+}
+    
+.facebook-event i, .twitter-hash i {
+    color: #fff;
+}
+
+@media(max-width:767px) {
+    #canvas {
+        width: 100vw;
+        height: 100vw;
+    }
+}
+
+@media(min-width:768px) {
+    
+    /*#canvas {
+            width: 600px;
+            height: 600px;
+    }*/
+
+    #controls {
+        width: 600px;
+    }
+
+    #share {        
+        top: 50%;
+        width: auto;
+        margin-top: -145px;
+        max-height: 290px;
+    }
+
+    #share li {
+        display: list-item;
+        width: auto;
+        float: none;
+    }
+
+    #share li a {
+        font-size: 27px;
+    }
+
+    #share .share-title {
+        margin: 4px;
+        font-size: 9px;
+    }
+    
+    #share .share-title i.fa {
+        font-size: 30px;
+        color: #fff;
+        margin-bottom: 4px;
+        margin-top: 4px;
+    }
+}
