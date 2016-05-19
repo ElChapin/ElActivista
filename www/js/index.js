@@ -414,7 +414,10 @@ $(function () {
     
         $('#export').click(function () {
             
-            //if ($('#sign').data('signed')) {                
+            //if ($('#sign').data('signed')) {  
+                
+                ga('send', 'event', 'download', 'click', 'profile-picture', {'nonInteraction': 1, 'page': '/voluntarios'});  
+                console.log('Event sent: download profile-picture');            
             
                 $(this).removeAttr('href');
                 
@@ -430,6 +433,19 @@ $(function () {
             else {
                 alert('Te falta el paso 1 :)');
             }*/
+        });
+        
+        $('#posters a').click(function () {
+            
+            var id = 'poster-' + $(this).data('poster');
+            ga('send', 'event', 'download', 'click', id, {'nonInteraction': 1, 'page': '/voluntarios'});
+            console.log('Event sent: download ' + id);
+        });
+        
+        $('#sign').click(function () {
+            
+            ga('send', 'event', 'database', 'click', {'nonInteraction': 1, 'page': '/voluntarios'});
+            console.log('Event sent: database');
         });
         
         $('#app-effects a').click(function () {
