@@ -105,7 +105,7 @@ function scrollToCanvas() {
     'slow');
 }    
 
-var popup = function (url, params, width, height) {
+var popup = function (url, params, newTab) {
     
     var k, popup, qs, v;
     
@@ -113,8 +113,8 @@ var popup = function (url, params, width, height) {
         params = {};
         
     popup = {
-        width: width || 600,
-        height: height || 350
+        width: 600,
+        height: 350
     };
     
     popup.top = (screen.height / 2) - (popup.height / 2);
@@ -135,5 +135,5 @@ var popup = function (url, params, width, height) {
     if (qs)
         qs = "?" + qs;
     
-    return window.open(url + qs, 'targetWindow', "toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,left=" + popup.left + ",top=" + popup.top + ",width=" + popup.width + ",height=" + popup.height);
+    return window.open(url + qs, 'targetWindow', newTab ? '' : "toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,left=" + popup.left + ",top=" + popup.top + ",width=" + popup.width + ",height=" + popup.height);
 };
