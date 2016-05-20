@@ -95,7 +95,7 @@ $(function () {
         if (network == 'twitter') {            
         
             popup('https://twitter.com/intent/tweet', {
-                text: '#ETBNoSEVende, Marca tu foto de perfil y únite a la campaña',
+                text: '#ETBNoSEVende, Marca tu foto de perfil y entra a la campaña',
                 url: url
             });
         }
@@ -115,7 +115,7 @@ $(function () {
         
             popup('mailto:', {
                 subject: '#ETBNoSEVende',
-                body: 'Marca tu foto de perfil y únite a la campaña'
+                body: 'Marca tu foto de perfil y entra a la campaña'
             });
         }
     });
@@ -446,6 +446,12 @@ $(function () {
             
             ga('send', 'event', 'database', 'click', {'nonInteraction': 1, 'page': '/voluntarios'});
             console.log('Event sent: database');
+        });
+        
+        $('.facebook-event').click(function () {
+            
+            ga('send', 'event', 'facebook-event', 'click', {'nonInteraction': 1, 'page': '/voluntarios'});
+            console.log('Event sent: facebook-event');
         });
         
         $('#app-effects a').click(function () {

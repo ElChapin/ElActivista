@@ -31,26 +31,45 @@
     </head>
 <body>
 <div class="container">
-    <div class="row" style="text-align: center">        
-        <img src="img/social_header.png" class="img-responsive">
+    <div class="row">        
+        <img src="img/social_header.png" class="img-responsive" id="header-img">
     </div>
     <div class="row">
         <div class="col-md-4">
             <form>                
-                <h1><span>1</span> Deja con tus datos, es super breve (si no lo has hecho ya)</h1>
+                <h1><span>1</span> Deja con tus datos y no ter pierdas nada, es super breve (si no lo has hecho ya)</h1>
                 <a id="sign" href="https://docs.google.com/forms/d/1YAJRxWxkg4j5trKQ9yMzBankwm_AFSeWjHQf3r7HmJA/viewform" target="_blank"><i class="fa fa-pencil"></i> <span>Formulario</span></a>
-                <h1><span>2</span> Marca tu foto con la aplicación de <b class="hidden-xs hidden-sm">la derecha</b><b class="hidden-md hidden-lg">abajo</b>, úsala de perfil en tus apps y comparte la foto en redes con #ETBNoSeVende</h1>
+                <h1><span>2</span> Marca tu foto con la aplicación de <b class="hidden-xs hidden-sm">la derecha</b><b class="hidden-md hidden-lg">abajo</b>, úsala de perfil en tus apps y comparte esta App con #ETBNoSeVende</h1>
                 <a href="https://twitter.com/intent/tweet?button_hashtag=ETBNoSeVende" class="twitter-hashtag-button" data-size="large" data-related="sebrojasfeed" data-url="http://etbnosevende.alt24.net/">Tweet #ETBNoSeVende</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>                
                 <h1><span>3</span> Descarga los poster para tus ventanas</h1>
                 <div class="row" id="posters">
-                    <div class="col-md-6"><a href="img/casa.jpg" data-poster="house" download><img class="img-responsive" src="img/casa.jpg"></a></div>
-                    <div class="col-md-6"><a href="img/carro.jpg" data-poster="car" download><img class="img-responsive" src="img/carro.jpg"></a></div>
+                    <div class="col-md-6">
+                        <a href="img/casa.jpg" data-poster="house" download>
+                            <div class="poster-hover">
+                                <div class="poster-hover-content">
+                                    <i class="fa fa-download fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-responsive" src="img/casa.jpg">
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="img/carro.jpg" data-poster="car" download>
+                            <div class="poster-hover">
+                                <div class="poster-hover-content">
+                                    <i class="fa fa-download fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-responsive" src="img/carro.jpg">
+                        </a>
+                    </div>
                 </div>
+                <h1><span>4</span> Nos vemos el sábado 21 a las 9am frente al Concejo de Bogotá con nuestras banderas para movilizarnos y presionar al Concejo (vendrán más movilizaciones, pendientes)</h1>
+                <a href="https://www.facebook.com/events/658107937677662/" target="_blank" class="facebook-event"><i class="fa fa-facebook"></i> Evento en Facebook <i class="fa fa-calendar"></i></a>
             </form>
         </div>
-        <div class="col-md-8">      
-            <!--<a href="https://www.facebook.com/events/424593617730639/" target="_blank" class="facebook-event"><i class="fa fa-facebook"></i> Evento en Facebook <i class="fa fa-calendar"></i></a>-->
+        <div class="col-md-8">
             <div id="canvas-container">                
                 <div class="row" id="tools-bar">
                     <div class="col-lg-4 col-sm-4 col-xs-4">      
@@ -75,6 +94,17 @@
             </div>
         </div>
     </div>
+</div>
+<div id="footer">
+    <h4>También encuéntranos en </h4>
+    <ul class="list-inline social-buttons" style="display: inline-block">
+        <li>
+            <a href="https://twitter.com/ETB_NoSeVende" target="_blank"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/ETB-No-Se-Vende-1600115430316247" target="_blank"><i class="fa fa-facebook"></i></a>
+        </li>
+    </ul>
 </div>
 
 <ul id="share">
