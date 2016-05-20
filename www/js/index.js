@@ -13,10 +13,13 @@ $(function () {
         
         var network = $(this).data('network');
         
+        ga('send', 'event', 'social-share', 'click', network, {'nonInteraction': 1, 'page': '/voluntarios'});
+        console.log('Event sent: social-share ' + network);
+        
         if (network == 'twitter') {            
         
             popup('https://twitter.com/intent/tweet', {
-                text: '#ETBNoSEVende, Marca tu foto de perfil y entra a la campaña',
+                text: '#ETBNoSEVende, Marca tu foto de perfil y entra a la campaña vía @ETB_NoSeVende',
                 url: url
             });
         }
