@@ -14,6 +14,10 @@ body {
     color: #444;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 h1 {
     font-size: 20px;
     
@@ -111,6 +115,77 @@ h1 {
     
     #tools-bar {
         margin-top: 10px;
+        
+        #publish {
+            
+            h3 {
+                font-size: 15px;
+                margin: 2px 0;
+                
+                i {
+                    font-size: 13px;
+                }
+            }
+            
+            a {
+                padding: 5px 9px;
+                margin: 0;
+            }
+            
+            #share-fb i {
+                color: #365899;
+            }
+            
+            #share-twitter i {
+                color: #1da1f2;
+            }
+        }
+            
+        .button {
+            padding: 12px 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 3px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            background-color: #058BBF;
+            
+            i {
+                font-size: 1em;
+                color: #fff;
+            }
+        }
+
+        #export {
+            
+            &:hover {
+                background-color: #E4513C;
+            }
+        }
+
+        .fileUpload {
+            position: relative;
+            overflow: hidden;
+            background-color: #E4513C;
+            
+            &:hover {
+                background-color: #058BBF;
+                color: #fff;
+            }
+            
+            input.upload {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+                padding: 10px;
+                font-size: 20px;
+                cursor: pointer;
+                opacity: 0;
+                filter: alpha(opacity=0);
+            }
+        }
     }
 
     #app-effects {
@@ -141,10 +216,6 @@ h1 {
             &.checked i, &:hover i {
                 color: #E4513C;
             }
-
-            &.checked:hover i {
-                color: #444;
-            }
         }
     }
 }
@@ -161,56 +232,6 @@ a, button, .btn span {
 button {
     border: none;
     width: 100%;
-}
-            
-#export, #back, .fileUpload {
-    padding: 12px 10px;
-    margin: 10px;
-    border: none;
-    border-radius: 3px;
-    font-size: 18px;
-    font-weight: 700;
-    color: #fff;
-    background-color: #058BBF;
-    
-    i {
-        font-size: 1em;
-        color: #fff;
-    }
-}
-
-#back {
-    background-color: #058BBF;
-}
-
-#export {
-    
-    &:hover {
-        background-color: #E4513C;
-    }
-}
-
-.fileUpload {
-    position: relative;
-    overflow: hidden;
-    background-color: #E4513C;
-    
-    &:hover {
-        background-color: #058BBF;
-        color: #fff;
-    }
-    
-    input.upload {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 0;
-        padding: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
 }
 
 #loading {
@@ -293,13 +314,17 @@ button {
     } 
 }
 
-.facebook-event, .twitter-hash {
+.facebook-event {
     background-color: #058BBF;
     color: #eee;
     padding: 5px;
     display: block;
     width: auto;
     border-radius: 3px;
+    
+    &:hover {
+        background-color: #E4513C;
+    }
 }
 
 .twitter-hash {
