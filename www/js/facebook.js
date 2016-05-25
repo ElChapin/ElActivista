@@ -53,6 +53,8 @@ function sharePicture(authToken) {
                         hideLoading();
                         
                         if (response && !response.error) {
+            
+                            alertify.success("Tu foto se ha publicado exitosamente");
                             
                             popup(response.link, {}, 1100, 600);
                         }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        <meta charset="utf-8">
+    </head>
+<body>
+<div class="container">
+    <img src="img/social_header.png" class="img-responsive" id="header-img">
+    <a>Cerrar esta ventana</a>
+    <script>
+    
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        };
+        
+        // check if oauth_verifier is set
+        var oauth_verifier = getUrlParameter('oauth_verifier');
+        
+        if (typeof oauth_verifier !== "undefined") {
+            
+            window.opener.twitter_oauth_accessToken(oauth_verifier);
+            
+            window.close();
+        }
+        
+    </script>
+</body>
+</html>

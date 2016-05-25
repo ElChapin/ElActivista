@@ -1,6 +1,9 @@
 $(function () {
     
-    location.hash = 'video';
+    if (location.hash == '' || location.hash == '#')
+        location.hash = 'video';
+    else        
+        $('[data-remodal-id=video]').remove();
     
     $(document).on('closed', '.remodal', function (e) {
         
