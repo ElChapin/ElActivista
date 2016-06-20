@@ -1,7 +1,9 @@
 # ElActivista
 App para moverse como activista
 
-![alt tag](http://etbnosevende.alt24.net/img/screenshot.png)
+![alt tag](http://elactivista.elchapin.co/img/screenshot1.png)
+
+![alt tag](http://elactivista.elchapin.co/img/screenshot2.png)
 
 Acá encuentras la app http://elactivista.elchapin.co/
 
