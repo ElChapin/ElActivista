@@ -16,13 +16,13 @@ $(function () {
         
         var network = $(this).data('network');
         
-        ga('send', 'event', 'social-share', 'click', network, {'nonInteraction': 1, 'page': '/voluntarios'});
+        ga('send', 'event', 'social-share', 'click', network, {'nonInteraction': 1, 'page': '/causas/' + cause.id });
         console.log('Event sent: social-share ' + network);
         
         if (network == 'twitter') {            
         
             popup('https://twitter.com/intent/tweet', {
-                text: '#ETBNoSEVende, Marca tu foto de perfil y entra a la campaña vía @ETB_NoSeVende',
+                text: cause.shareText,
                 url: url
             });
         }
@@ -41,28 +41,28 @@ $(function () {
         else if (network == 'email') {            
         
             popup('mailto:', {
-                subject: '#ETBNoSEVende',
-                body: 'Marca tu foto de perfil y entra a la campaña'
+                subject: 'Yo apoyo ' + cause.name + ' - El Activista | El Chapín prensa',
+                body: cause.shareText + ' Ver más en: ' + url
             });
         }
     });
     
-    $('#posters a').click(function () {
+    $('#downloads a').click(function () {
         
-        var id = 'poster-' + $(this).data('poster');
-        ga('send', 'event', 'download', 'click', id, {'nonInteraction': 1, 'page': '/voluntarios'});
+        var id = 'download-' + $(this).data('download');
+        ga('send', 'event', 'download', 'click', id, {'nonInteraction': 1, 'page': '/causas/' + cause.id});
         console.log('Event sent: download ' + id);
     });
     
     $('#sign').click(function () {
         
-        ga('send', 'event', 'database', 'click', {'nonInteraction': 1, 'page': '/voluntarios'});
+        ga('send', 'event', 'database', 'click', {'nonInteraction': 1, 'page': '/causas/' + cause.id});
         console.log('Event sent: database');
     });
     
     $('.facebook-event').click(function () {
         
-        ga('send', 'event', 'facebook-event', 'click', {'nonInteraction': 1, 'page': '/voluntarios'});
+        ga('send', 'event', 'facebook-event', 'click', {'nonInteraction': 1, 'page': '/causas/' + cause.id});
         console.log('Event sent: facebook-event');
     });
 });

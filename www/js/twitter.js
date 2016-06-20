@@ -66,12 +66,17 @@ function twitt() {
                     "statuses_update",
                     { 
                         "media_ids": reply.media_id_string,
-                        "status": "Ya soy parte d los voluntarios en defensa d la ETB, entra tú también a #ETBNoSeVende, visita http://etbnosevende.alt24.net/"
+                        "status": cause.shareText + ' http://elactivista.elchapin.co/causas/' + cause.id
                     },
                     function (reply, rate, err) {
                         
-                        if (validateReply(reply))
+                        if (validateReply(reply)) {
+
                             alertify.success("Tu foto se ha trinado exitosamente");
+            
+                            ga('send', 'event', 'share', 'click', 'twitter', {'nonInteraction': 1, 'page': '/causas/' + cause.id});  
+                            console.log('Event sent: share twitter'); 
+                        }
                     }
                 );
             }
@@ -110,7 +115,7 @@ function oauth_requestToken() {
     
     cb.__call(
         "oauth_requestToken", {
-        oauth_callback: "http://etbnosevende.alt24.net/twitter.html"
+        oauth_callback: "http://elactivista.elchapin.co/twitter.html"
     },
     function (reply, rate, err) {
         

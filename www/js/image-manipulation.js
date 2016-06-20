@@ -84,7 +84,7 @@ frame.onload = function(){
     start();
 }
 
-frame.src = 'img/profile_pic.png';
+frame.src = '/img/profile_pic.png';
 
 function start() {
 
@@ -320,7 +320,7 @@ function start() {
         showLoading();
         
         this.href = canvas.get(0).toDataURL("image/png", 1);
-        this.download = 'ETBNoSeVende_Foto_Perfil.png';
+        this.download = 'Foto_Perfil.png';
         
         hideLoading();
         
@@ -355,7 +355,7 @@ function drawMask() {
 
         ctx.drawImage(frame, 0, 0, canvasWidth, canvasHeight);
     }
-    frame.src = 'img/bg.png';
+    frame.src = '/causes/' + cause.id + '/img/bg.png';
     ctx.drawImage(frame, 0, 0, canvasWidth, canvasHeight);
 }
 

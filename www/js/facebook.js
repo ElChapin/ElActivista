@@ -1,9 +1,6 @@
 $(function () {
     
     $('#share-fb').click(function () {
-            
-        ga('send', 'event', 'share', 'click', 'facebook', {'nonInteraction': 1, 'page': '/voluntarios'});  
-        console.log('Event sent: share facebook'); 
         
         showLoading();
         
@@ -27,7 +24,7 @@ function sharePicture(authToken) {
     var fd = new FormData();
     fd.append("access_token",authToken);
     fd.append("source", blob);
-    fd.append("message","Yo ya soy parte de los voluntarios en defensa de la ETB, entra tú también a #ETBNoSeVende, visita http://etbnosevende.alt24.net/");
+    fd.append("message", cause.shareText + ' Ver más en: http://elactivista.elchapin.co/causas/' + cause.id);
     
     try {
     
@@ -55,6 +52,9 @@ function sharePicture(authToken) {
                         if (response && !response.error) {
             
                             alertify.success("Tu foto se ha publicado exitosamente");
+            
+                            ga('send', 'event', 'share', 'click', 'facebook', {'nonInteraction': 1, 'page': '/causas/' + cause.id});  
+                            console.log('Event sent: share facebook'); 
                             
                             popup(response.link, {}, 1100, 600);
                         }

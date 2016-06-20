@@ -40,7 +40,7 @@ h1 {
     }
 }
 
-#posters {
+#downloads {
     
     a {
         display: block;
@@ -48,7 +48,7 @@ h1 {
         margin: 0 auto;
         max-width: 400px;
     
-        .poster-hover {
+        .download-hover {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -62,7 +62,7 @@ h1 {
                 opacity: 1;
             }
             
-            .poster-hover-content {
+            .download-hover-content {
                 position: absolute;
                 top: 50%;
                 width: 100%;
@@ -80,8 +80,27 @@ h1 {
     }
 }
 
+#header {
+    background-color: beige;
+    margin-bottom: 10px;
+    padding: 5px 0;
+
+    a {
+        display: inline-block;
+        vertical-align: bottom;
+
+        h1 {
+            font-family: 'Roboto Slab', serif;
+            font-size: 70px;
+            margin: 0 0 0 20px;
+            color: darkcyan;
+        }
+    }
+}
+
 #header-img {
     margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 #footer {
@@ -430,5 +449,23 @@ button {
         color: #fff;
         margin-bottom: 4px;
         margin-top: 4px;
+    }
+}
+
+#causes {
+
+    > div {
+
+        a {
+            h1 {
+                small {
+                    text-transform: none;
+                }
+            }
+        }
+
+        &:hover {
+            background-color: beige;
+        }
     }
 }
