@@ -1,7 +1,7 @@
 {
-  "name": "ETBNoSeVende",
+  "name": "ElActivista",
   "version": "1.1.1",
-  "description": "App Web para defender a la ETB",
+  "description": "App para moverse como activista",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
