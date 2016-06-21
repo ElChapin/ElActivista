@@ -16,7 +16,7 @@ $cause = $causes[array_search($_GET['id'], array_column($causes, 'id'))];
         <meta property="og:title" content="<?php echo $cause['name'] ?> - El Activista | El Chapín Prensa" />
         <meta property="og:description" content="<?php echo $cause['description'] ?>" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://elactivista.elchapin.co/causes/<?php echo $cause['id'] ?>/" />
+        <meta property="og:url" content="http://elactivista.elchapin.co/causas/<?php echo $cause['id'] ?>/" />
         <meta property="og:image" content="http://elactivista.elchapin.co/causes/<?php echo $cause['id'] ?>/img/og.png" />
         <meta property="og:image:width" content="600" />
         <meta property="og:image:height" content="323" />
@@ -43,14 +43,18 @@ $cause = $causes[array_search($_GET['id'], array_column($causes, 'id'))];
             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
             ga('create', '<?php echo array_key_exists ('googleAnalyticsTrackID', $cause) ? $cause['googleAnalyticsTrackID'] : 'UA-77783102-1' ?>', 'auto');
-            ga('send', 'pageview');
+            
+            if (window.self === window.top)
+                ga('send', 'pageview');
         </script>
     </head>
 <body>
+<?php if (!strpos($_SERVER['HTTP_REFERER'], 'referendoporelagro.com')): ?>
 <div id="header" class="row">   
     <a href="http://elchapin.co/" title="El Chapín" rel="home"><img height="100" src="/img/logo-elchapin.png" class="attachment-full size-full" alt="logo-web"></a>
     <a href="/"><h1>El Activista</h1></a>
 </div>
+<?php endif; ?>
 <div class="container">
     <div class="row">        
         <img src="/causes/<?php echo $cause['id'] ?>/img/header.png" class="img-responsive" id="header-img">
@@ -83,7 +87,10 @@ $cause = $causes[array_search($_GET['id'], array_column($causes, 'id'))];
                 <?php endif; ?>
                 <?php if (array_key_exists ('event', $cause)): ?>
                 <h1><span><?php echo $step++ ?></span> <?php echo $cause['event']['title'] ?></h1>
-                <a href="<?php echo $cause['event']['title'] ?>" target="_blank" class="facebook-event"><i class="fa fa-facebook"></i> Evento en Facebook <i class="fa fa-calendar"></i></a>
+                <?php if (array_key_exists ('image', $cause['event'])): ?>
+                <a href="<?php echo $cause['event']['url'] ?>" target="_blank" class="facebook-event"><img class="img-responsive" src="/causes/<?php echo $cause['id'] ?>/img/<?php echo $cause['event']['image'] ?>"></a>
+                <?php endif; ?>
+                <a href="<?php echo $cause['event']['url'] ?>" target="_blank" class="facebook-event"><i class="fa fa-facebook"></i> Evento en Facebook <i class="fa fa-calendar"></i></a>
                 <?php endif; ?>
             </form>
         </div>
@@ -123,6 +130,11 @@ $cause = $causes[array_search($_GET['id'], array_column($causes, 'id'))];
             </div>
         </div>
     </div>
+    <?php if (array_key_exists ('web', $cause['socialLinks'])): ?>
+    <div class="row" style="padding-top: 10px">
+        <a href="<?php echo $cause['socialLinks']['web'] ?>" class="btn btn-primary btn-lg active" role="button"><i class="fa fa-angle-left fa-fw" style="font-size: 1em; color: #fff"></i>Volver a la Web de <?php echo $cause['name'] ?></a>
+    </div>
+    <?php endif; ?>
 </div>
 <div id="footer">
     <h4>También encuéntranos en </h4>
@@ -172,20 +184,28 @@ $cause = $causes[array_search($_GET['id'], array_column($causes, 'id'))];
 <div id="loading">
     <div id="progress"></div>
 </div>
+<?php if (array_key_exists ('socialLinks', $cause)): ?>
 <div class="remodal" data-remodal-id="video">
     <button data-remodal-action="close" class="remodal-close"></button>
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/S2vwFODtyW0?autoplay=1" frameborder="0" allowfullscreen></iframe>
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/<?php echo $cause['youtubeId'] ?>?autoplay=1" frameborder="0" allowfullscreen></iframe>
 </div>
+<?php endif; ?>
 <script>
     var cause = {
         id: '<?php echo $cause['id'] ?>',
         name: '<?php echo $cause['name'] ?>',
         shareText: '<?php echo $cause['shareText'] ?>'
+        <?php if (array_key_exists ('socialLinks', $cause)): ?>,
+        youtubeId: '<?php echo $cause['youtubeId'] ?>'
+        <?php endif; ?>
+        <?php if (array_key_exists ('event', $cause)): ?>,
+        event: { url: '<?php echo $cause['event']['url'] ?>' }
+        <?php endif; ?>
     };
 </script>
 <a style="display: none" href="#video" id="videolink"></a>
 <script src="/lib/alertifyjs/dist/js/alertify.js"></script>
-<script src="/js/index.js"></script>
+<script src="/js/causes.js"></script>
 <script src="/js/image-manipulation.js"></script>
 <script src="/js/facebook.js"></script>
 <script src="/js/twitter.js"></script>

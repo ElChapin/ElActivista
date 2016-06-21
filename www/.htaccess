@@ -3,5 +3,7 @@ RewriteEngine On
  
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^.*[^/]$ /$0/ [L,R=301]
  
-RewriteRule ^causas/(.*)$ ./causes.php?id=$1
+RewriteRule ^causas/(.*)/$ ./causes.php?id=$1

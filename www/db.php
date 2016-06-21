@@ -1,5 +1,5 @@
 <?php
-//shareText debe caber en un trino de 93 caracteres (se resta el espacio de la imagen y el de la url)
+//shareText debe caber en un trino de 92 caracteres (se resta el espacio de la imagen y el de la url)
 $causes = array (
     array (
         'id' => 'ETBNoSeVende',
@@ -17,6 +17,7 @@ $causes = array (
             'title' => 'Deja con tus datos y no te pierdas nada, es super breve (si no lo has hecho ya)',
             'url' => 'https://docs.google.com/forms/d/1YAJRxWxkg4j5trKQ9yMzBankwm_AFSeWjHQf3r7HmJA/viewform'
         ),
+        'youtubeId' => 'S2vwFODtyW0',
         'downloads' => array (
             'title' => 'Descarga los poster para tus ventanas',
             'files' => array (
@@ -53,23 +54,25 @@ $causes = array (
             'label' => 'Manifiesto por los Cerros',
             'title' => 'Deja con tus datos y se un firmante del compromiso',
             'url' => 'https://docs.google.com/forms/d/17GIbBl1RShiNoDJtoyebIKhfHrkNxDYK15djFTvAmXo/viewform'
-        )/*,
+        ),
         'event' => array (
-            'url' => 'https://www.facebook.com/events/1692213484372326/',
-            'title' => 'Nos vemos el domingo 29 a las 9am frente al Concejo de Bogotá con nuestras banderas para movilizarnos y presionar al Concejo'
-        )*/
+            'url' => 'https://www.facebook.com/events/146468212428096/',
+            'title' => 'Nos vemos el jueves 23 a la 1 p.m. frente al Tribunal Administrativo de Cundinamarca en una Meditación Colectiva por los Cerros',
+            'image' => '23junio.png'
+        )
     ),
     array (
         'id' => 'ReferendoPorElAgro',
         'hashtag' => '#FirmoReferendoPorElAgro',
         'name' => 'Referendo por el Agro',
+        'googleAnalyticsTrackID' => 'UA-32599024-8',
         'socialLinks' => array (
             'twitter' => 'https://twitter.com/ReferendoAgro',
             'facebook' => 'https://www.facebook.com/Referendo-por-el-Agro-1320819821266960/',
             'instagram' => 'https://www.instagram.com/referendo_por_el_agro/',
             'web' => 'http://referendoporelagro.com/'
         ),
-        'description' => '#FirmoReferendoPorElAgro por el agro nacional y la soberanía alimentaria',
-        'shareText' => '#FirmoReferendoPorElAgro por el agro nacional y la soberanía alimentaria vía @ReferendoAgro'
+        'description' => '#FirmoReferendoPorElAgro campesinos e industria por la soberanía alimentaria',
+        'shareText' => '#FirmoReferendoPorElAgro campesinos e industria por la soberanía alimentaria @ReferendoAgro'
     )
 );

@@ -66,7 +66,7 @@ function twitt() {
                     "statuses_update",
                     { 
                         "media_ids": reply.media_id_string,
-                        "status": cause.shareText + ' http://elactivista.elchapin.co/causas/' + cause.id
+                        "status": cause.shareText + ' ' + (cause.event ? cause.event.url : 'http://elactivista.elchapin.co/causas/' + cause.id)
                     },
                     function (reply, rate, err) {
                         

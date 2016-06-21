@@ -24,7 +24,7 @@ function sharePicture(authToken) {
     var fd = new FormData();
     fd.append("access_token",authToken);
     fd.append("source", blob);
-    fd.append("message", cause.shareText + ' Ver más en: http://elactivista.elchapin.co/causas/' + cause.id);
+    fd.append("message", cause.shareText + (cause.event ? 'Ver más en: ' + cause.event.url : '') + ' Marca tu foto en http://elactivista.elchapin.co/causas/' + cause.id);
     
     try {
     

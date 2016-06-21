@@ -7,7 +7,7 @@ include ('db.php');
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=600, initial-scale=.6">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="El Activista se mueve">
         <meta name="author" content="Sebastián Rojas. ALT24, Soluciones Informáticas">
         <meta property="fb:app_id" content="624795831021653" />
@@ -30,7 +30,7 @@ include ('db.php');
             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
             ga('create', 'UA-77783102-1', 'auto');
-            ga('send', 'pageview');
+            ga('send', 'pageview', '/causas');
         </script>
     </head>
 <body>

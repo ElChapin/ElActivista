@@ -1,6 +1,9 @@
 $(function () {
+
+    if (window.self === window.top)
+        $('#header').show();
     
-    if (location.hash == '' || location.hash == '#')
+    if (cause.youtubeId && (location.hash == '' || location.hash == '#'))
         location.hash = 'video';
     else        
         $('[data-remodal-id=video]').remove();
@@ -42,7 +45,7 @@ $(function () {
         
             popup('mailto:', {
                 subject: 'Yo apoyo ' + cause.name + ' - El Activista | El Chapín prensa',
-                body: cause.shareText + ' Ver más en: ' + url
+                body: cause.shareText + ' Marca tu foto en ' + url + (cause.event ? 'Ver más en: ' + cause.event.url : '')
             });
         }
     });
