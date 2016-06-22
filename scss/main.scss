@@ -362,6 +362,28 @@ button {
     color: #fff;
 }
 
+#causes {
+
+    > div {
+
+        a {
+            h1 {
+                small {
+                    text-transform: none;
+                }
+            }
+        }
+
+        &:hover {
+            background-color: beige;
+        }
+    }
+}
+
+.iframe-hidden {
+    display: none !important;
+}
+
 @media(max-width:767px) {
     
     #canvas-container { 
@@ -449,23 +471,5 @@ button {
         color: #fff;
         margin-bottom: 4px;
         margin-top: 4px;
-    }
-}
-
-#causes {
-
-    > div {
-
-        a {
-            h1 {
-                small {
-                    text-transform: none;
-                }
-            }
-        }
-
-        &:hover {
-            background-color: beige;
-        }
     }
 }

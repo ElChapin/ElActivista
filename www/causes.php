@@ -50,7 +50,7 @@ $cause = $causes[array_search($_GET['id'], array_column($causes, 'id'))];
     </head>
 <body>
 <?php if (!strpos($_SERVER['HTTP_REFERER'], 'referendoporelagro.com')): ?>
-<div id="header" class="row">   
+<div id="header" class="row iframe-hidden">   
     <a href="http://elchapin.co/" title="El Chapín" rel="home"><img height="100" src="/img/logo-elchapin.png" class="attachment-full size-full" alt="logo-web"></a>
     <a href="/"><h1>El Activista</h1></a>
 </div>
@@ -131,12 +131,12 @@ $cause = $causes[array_search($_GET['id'], array_column($causes, 'id'))];
         </div>
     </div>
     <?php if (array_key_exists ('web', $cause['socialLinks'])): ?>
-    <div class="row" style="padding-top: 10px">
+    <div class="row iframe-hidden" style="padding-top: 10px">
         <a href="<?php echo $cause['socialLinks']['web'] ?>" class="btn btn-primary btn-lg active" role="button"><i class="fa fa-angle-left fa-fw" style="font-size: 1em; color: #fff"></i>Volver a la Web de <?php echo $cause['name'] ?></a>
     </div>
     <?php endif; ?>
 </div>
-<div id="footer">
+<div id="footer" class="iframe-hidden">
     <h4>También encuéntranos en </h4>
     <ul class="list-inline social-buttons" style="display: inline-block">
         <?php if (array_key_exists ('twitter', $cause['socialLinks'])): ?>

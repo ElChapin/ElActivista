@@ -1,7 +1,7 @@
 $(function () {
 
     if (window.self === window.top)
-        $('#header').show();
+        $('.iframe-hidden').removeClass('iframe-hidden');
     
     if (cause.youtubeId && (location.hash == '' || location.hash == '#'))
         location.hash = 'video';
