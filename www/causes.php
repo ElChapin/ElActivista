@@ -111,7 +111,7 @@ $cause = $causes[array_search($_GET['id'], array_column($causes, 'id'))];
                     </div>
                     <div class="col-xs-3" id="publish">
                         <h3><i class="fa fa-share"></i> Publicar</h3>
-                        <div class="row">
+                        <div class="row share">
                             <div class="col-xs-5">                      
                                 <a id="share-fb"><i class="fa fa-facebook"></i></a>
                             </div>
