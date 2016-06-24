@@ -54,11 +54,6 @@ $causes = array (
             'label' => 'Manifiesto por los Cerros',
             'title' => 'Deja con tus datos y se un firmante del compromiso',
             'url' => 'https://docs.google.com/forms/d/17GIbBl1RShiNoDJtoyebIKhfHrkNxDYK15djFTvAmXo/viewform'
-        ),
-        'event' => array (
-            'url' => 'https://www.facebook.com/events/146468212428096/',
-            'title' => 'Nos vemos el jueves 23 a la 1 p.m. frente al Tribunal Administrativo de Cundinamarca en una Meditación Colectiva por los Cerros',
-            'image' => '23junio.png'
         )
     ),
     array (
