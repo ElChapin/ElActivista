@@ -56,8 +56,10 @@ $cause = $causes[array_search($_GET['id'], array_column($causes, 'id'))];
 </div>
 <?php endif; ?>
 <div class="container">
-    <div class="row">        
-        <img src="/causes/<?php echo $cause['id'] ?>/img/header.png" class="img-responsive" id="header-img">
+    <div class="row">
+        <a href="<?php echo array_key_exists ('web', $cause['socialLinks']) ? $cause['socialLinks']['web'] : $cause['socialLinks']['facebook'] ?>" title="Conocer más..." target="_blank">   
+            <img src="/causes/<?php echo $cause['id'] ?>/img/header.png" class="img-responsive" id="header-img">
+        </a>
     </div>
     <div class="row">
         <div class="col-md-4">

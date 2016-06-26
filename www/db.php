@@ -67,7 +67,12 @@ $causes = array (
             'instagram' => 'https://www.instagram.com/referendo_por_el_agro/',
             'web' => 'http://referendoporelagro.com/'
         ),
-        'description' => '#FirmoReferendoPorElAgro campesinos e industria por la soberanía alimentaria',
-        'shareText' => '#FirmoReferendoPorElAgro campesinos e industria por la soberanía alimentaria @ReferendoAgro'
+        'description' => '#FirmoReferendoPorElAgro campesinos e industria por la soberanía y seguridad alimentaria',
+        'shareText' => '#FirmoReferendoPorElAgro campesinos e industria por la soberanía alimentaria @ReferendoAgro',
+        'databaseForm' => array (
+            'label' => 'Base de datos',
+            'title' => '¿Quiéres ser voluntario o mantenerte informado? deja tus datos',
+            'url' => 'https://docs.google.com/forms/d/1RpjdBogJnaYyw3qjicdV0OGt4fVxNXKV8KIgdvXU6YY/viewform'
+        )
     )
 );
