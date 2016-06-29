@@ -73,6 +73,11 @@ $causes = array (
             'label' => 'Base de datos',
             'title' => '¿Quiéres ser voluntario o mantenerte informado? deja tus datos',
             'url' => 'https://docs.google.com/forms/d/1RpjdBogJnaYyw3qjicdV0OGt4fVxNXKV8KIgdvXU6YY/viewform'
+        ),
+        'event' => array (
+            'url' => 'https://www.facebook.com/events/1228926093784080/',
+            'title' => 'ABC del Referendo por el Agro. ¿Qué propone y cómo ayudar?. Miércoles 7pm en la Zona G, Chapinero, Bogotá',
+            'image' => 'referendo2.png'
         )
     )
 );
