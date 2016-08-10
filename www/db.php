@@ -58,7 +58,7 @@ $causes = array (
     ),
     array (
         'id' => 'ReferendoPorElAgro',
-        'hashtag' => '#FirmoReferendoPorElAgro',
+        'hashtag' => '#HazteVoluntarioDelReferendoAgro',
         'name' => 'Referendo por el Agro',
         'googleAnalyticsTrackID' => 'UA-32599024-8',
         'socialLinks' => array (
@@ -67,17 +67,17 @@ $causes = array (
             'instagram' => 'https://www.instagram.com/referendo_por_el_agro/',
             'web' => 'http://referendoporelagro.com/'
         ),
-        'description' => '#FirmoReferendoPorElAgro campesinos e industria por la soberanía y seguridad alimentaria',
-        'shareText' => '#FirmoReferendoPorElAgro campesinos e industria por la soberanía alimentaria @ReferendoAgro',
+        'description' => '#HazteVoluntarioDelReferendoAgro campesinos e industria por la soberanía alimentaria',
+        'shareText' => '#HazteVoluntarioDelReferendoAgro campesinos e industria por la soberanía alimentaria',
         'databaseForm' => array (
             'label' => 'Base de datos',
             'title' => '¿Quiéres ser voluntario o mantenerte informado? deja tus datos',
             'url' => 'https://docs.google.com/forms/d/1RpjdBogJnaYyw3qjicdV0OGt4fVxNXKV8KIgdvXU6YY/viewform'
         ),
         'event' => array (
-            'url' => 'https://www.facebook.com/events/1228926093784080/',
-            'title' => 'ABC del Referendo por el Agro. ¿Qué propone y cómo ayudar?. Miércoles 7pm en la Zona G, Chapinero, Bogotá',
-            'image' => 'referendo2.png'
+            'url' => 'https://www.facebook.com/events/1769508289961467/',
+            'title' => 'Haz tu aporte y celebremos juntos el campo este 1 se septiembre en LA CRIOLLA, la fiesta por el Agro Nacional',
+            'image' => 'fiesta_agro.png'
         )
     )
 );
