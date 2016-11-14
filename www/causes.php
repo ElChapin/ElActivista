@@ -49,7 +49,7 @@ $cause = $causes[array_search($_GET['id'], array_column($causes, 'id'))];
         </script>
     </head>
 <body>
-<?php if (!strpos($_SERVER['HTTP_REFERER'], 'referendoporelagro.com')): ?>
+<?php if (!strpos($_SERVER['HTTP_REFERER'], 'referendoporelagro.com') && $cause['id'] != 'RobledoPresidente' && $cause['id'] != 'AvanzaUN'): ?>
 <div id="header" class="row iframe-hidden">   
     <a href="http://elchapin.co/" title="El Chapín" rel="home"><img height="100" src="/img/logo-elchapin.png" class="attachment-full size-full" alt="logo-web"></a>
     <a href="/"><h1>El Activista</h1></a>

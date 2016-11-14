@@ -1,6 +1,52 @@
 <?php
 //shareText debe caber en un trino de 92 caracteres (se resta el espacio de la imagen y el de la url)
-$causes = array (
+$causes = array (     
+    array (
+        'id' => 'AvanzaUN',
+        'hashtag' => '#Vota4AlCSU',
+        'name' => 'Sara Abril y Santiago Lagos, vota #4 al CSU',
+        'description' => 'Para salvar la UNAL hay que luchar. Vota Sara Abril y Santiago Lagos #4 el 22 de noviembre',
+        'shareText' => 'Para salvar la UNAL hay que luchar. Vota Sara Abril y Santiago Lagos #4 el 22 de noviembre',
+        'socialLinks' => array (
+            'twitter' => 'https://twitter.com/AvanzaUN',
+            'facebook' => 'https://www.facebook.com/AvanzaUN',
+            'web' => 'http://unavanza.blogspot.com.co/'
+        )
+    ), 
+    array (
+        'id' => 'NoALaTributaria',
+        'hashtag' => '#NoALaTributaria',
+        'name' => 'No a la Reforma Tributaria',
+        'description' => '¡#NoALaTributaria este 17 de noviembre saldremos a las calles en toda Colombia!',
+        'shareText' => '¡#NoALaTributaria este 17 de noviembre saldremos a las calles en toda Colombia!',
+        'socialLinks' => array (
+            'facebook' => 'https://www.facebook.com/NoALaTributaria'
+        )
+    ),
+    array (
+        'id' => 'ReferendoPorElAgro',
+        'hashtag' => '#HazteVoluntarioDelReferendoAgro',
+        'name' => 'Referendo por el Agro',
+        'googleAnalyticsTrackID' => 'UA-32599024-8',
+        'socialLinks' => array (
+            'twitter' => 'https://twitter.com/ReferendoAgro',
+            'facebook' => 'https://www.facebook.com/Referendo-por-el-Agro-1320819821266960/',
+            'instagram' => 'https://www.instagram.com/referendo_por_el_agro/',
+            'web' => 'http://referendoporelagro.com/'
+        ),
+        'description' => '#HazteVoluntarioDelReferendoAgro campesinos e industria por la soberanía alimentaria',
+        'shareText' => '#HazteVoluntarioDelReferendoAgro campesinos e industria por la soberanía alimentaria',
+        'databaseForm' => array (
+            'label' => 'Base de datos',
+            'title' => '¿Quiéres ser voluntario o mantenerte informado? deja tus datos',
+            'url' => 'https://docs.google.com/forms/d/1RpjdBogJnaYyw3qjicdV0OGt4fVxNXKV8KIgdvXU6YY/viewform'
+        )/*,
+        'event' => array (
+            'url' => 'https://www.facebook.com/events/1769508289961467/',
+            'title' => 'Haz tu aporte y celebremos juntos el campo este 1 se septiembre en LA CRIOLLA, la fiesta por el Agro Nacional',
+            'image' => 'fiesta_agro.png'
+        )*/
+    ),
     array (
         'id' => 'ETBNoSeVende',
         'hashtag' => '#ETBNoSeVende',
@@ -57,27 +103,25 @@ $causes = array (
         )
     ),
     array (
-        'id' => 'ReferendoPorElAgro',
-        'hashtag' => '#HazteVoluntarioDelReferendoAgro',
-        'name' => 'Referendo por el Agro',
-        'googleAnalyticsTrackID' => 'UA-32599024-8',
+        'id' => 'RobledoPresidente',
+        'hashtag' => '#RobledoPresidente',
+        'name' => 'Robledo Presidente 2018',
         'socialLinks' => array (
-            'twitter' => 'https://twitter.com/ReferendoAgro',
-            'facebook' => 'https://www.facebook.com/Referendo-por-el-Agro-1320819821266960/',
-            'instagram' => 'https://www.instagram.com/referendo_por_el_agro/',
-            'web' => 'http://referendoporelagro.com/'
+            'twitter' => 'https://twitter.com/JERobledo',
+            'facebook' => 'https://www.facebook.com/jorge.robledo.castillo',
+            'instagram' => 'https://www.instagram.com/senador_robledo/'
         ),
-        'description' => '#HazteVoluntarioDelReferendoAgro campesinos e industria por la soberanía alimentaria',
-        'shareText' => '#HazteVoluntarioDelReferendoAgro campesinos e industria por la soberanía alimentaria',
+        'description' => '¡#RobledoPresidente empezamos a trabajar en la precandidatura para 2018!',
+        'shareText' => 'Yo quiero a #RobledoPresidente en 2018, marca tu foto, muestra tu apoyo y hazte voluntario vía @JERobledo2018',
         'databaseForm' => array (
-            'label' => 'Base de datos',
+            'label' => 'Voluntarios',
             'title' => '¿Quiéres ser voluntario o mantenerte informado? deja tus datos',
-            'url' => 'https://docs.google.com/forms/d/1RpjdBogJnaYyw3qjicdV0OGt4fVxNXKV8KIgdvXU6YY/viewform'
-        ),
+            'url' => 'https://docs.google.com/forms/d/e/1FAIpQLSfK242tUiO8BuKIssra_6G-Yc9NlO2qDyQQOHFyL5rJtdxPlw/viewform'
+        )/*,
         'event' => array (
             'url' => 'https://www.facebook.com/events/1769508289961467/',
             'title' => 'Haz tu aporte y celebremos juntos el campo este 1 se septiembre en LA CRIOLLA, la fiesta por el Agro Nacional',
             'image' => 'fiesta_agro.png'
-        )
+        )*/
     )
 );

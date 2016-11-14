@@ -41,15 +41,17 @@ include ('db.php');
 <div class="container">
     <div id="causes" class="row">
         <?php foreach ($causes as $i => $cause): ?>
-        <div class="col-md-4">
-            <a href="/causas/<?php echo $cause['id'] ?>">
-                <img src="/causes/<?php echo $cause['id'] ?>/img/icon.png" alt="<?php echo $cause['name']; ?>" class="img-responsive img-circle">
-                <div class="page-header">
-                    <h1><?php echo $cause['name']; ?> <small><?php echo $cause['hashtag']; ?></small></h1>
-                </div>
-            </a>   
-            <p><?php echo $cause['description']; ?></p>
-        </div>
+            <?php if ($cause['id'] != 'RobledoPresidente' && $cause['id'] != 'AvanzaUN'): ?>
+            <div class="col-md-4">
+                <a href="/causas/<?php echo $cause['id'] ?>">
+                    <img src="/causes/<?php echo $cause['id'] ?>/img/icon.png" alt="<?php echo $cause['name']; ?>" class="img-responsive img-circle">
+                    <div class="page-header">
+                        <h1><?php echo $cause['name']; ?> <small><?php echo $cause['hashtag']; ?></small></h1>
+                    </div>
+                </a>   
+                <p><?php echo $cause['description']; ?></p>
+            </div>
+            <?php endif; ?>
         <?php endforeach; ?>
     </div>
 </div>
