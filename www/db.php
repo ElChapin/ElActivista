@@ -4,23 +4,34 @@ $causes = array (
     array (
         'id' => 'AvanzaUN',
         'hashtag' => '#Vota4AlCSU',
-        'name' => 'Sara Abril y Santiago Lagos, vota #4 al CSU',
-        'description' => 'Para salvar la UNAL hay que luchar. Vota Sara Abril y Santiago Lagos #4 el 22 de noviembre',
-        'shareText' => 'Para salvar la UNAL hay que luchar. Vota Sara Abril y Santiago Lagos #4 el 22 de noviembre',
+        'name' => 'Avanza UN',
+        'description' => 'Para salvar la UNAL hay que luchar. Vota Sara Abril y Santiago Lagos @AvanzaUN #4 el 22 de noviembre',
+        'shareText' => 'Para salvar la UNAL hay que luchar. Vota Sara Abril y Santiago Lagos @AvanzaUN #4 el 22 de noviembre',
         'socialLinks' => array (
             'twitter' => 'https://twitter.com/AvanzaUN',
             'facebook' => 'https://www.facebook.com/AvanzaUN',
             'web' => 'http://unavanza.blogspot.com.co/'
-        )
+        )/*,
+        'event' => array (
+            'url' => 'https://www.facebook.com/events/434451283344041/',
+            'title' => 'Elecciones estudiantiles al Consejo Superior Universitario.',
+            'image' => 'fiesta_agro.png'
+        )*/
     ), 
     array (
         'id' => 'NoALaTributaria',
         'hashtag' => '#NoALaTributaria',
         'name' => 'No a la Reforma Tributaria',
-        'description' => '¡#NoALaTributaria este 17 de noviembre saldremos a las calles en toda Colombia!',
-        'shareText' => '¡#NoALaTributaria este 17 de noviembre saldremos a las calles en toda Colombia!',
+        'description' => '¡@NoALaTributaria este 17 de noviembre saldremos a las calles en toda Colombia!',
+        'shareText' => '¡@NoALaTributaria este 17 de noviembre saldremos a las calles en toda Colombia!',
         'socialLinks' => array (
+            'twitter' => 'https://twitter.com/NoALaTributaria',
             'facebook' => 'https://www.facebook.com/NoALaTributaria'
+        ),
+        'event' => array (
+            'url' => 'https://www.facebook.com/events/1205557436181091/',
+            'title' => 'Tributaria, la vamo´a tumbar. Movilización nacional.',
+            'image' => 'header.png'
         )
     ),
     array (
@@ -34,8 +45,8 @@ $causes = array (
             'instagram' => 'https://www.instagram.com/referendo_por_el_agro/',
             'web' => 'http://referendoporelagro.com/'
         ),
-        'description' => '#HazteVoluntarioDelReferendoAgro campesinos e industria por la soberanía alimentaria',
-        'shareText' => '#HazteVoluntarioDelReferendoAgro campesinos e industria por la soberanía alimentaria',
+        'description' => 'Hazte voluntario del @ReferendoAgro campesinos e industria por la soberanía alimentaria',
+        'shareText' => 'Hazte voluntario del @ReferendoAgro campesinos e industria por la soberanía alimentaria',
         'databaseForm' => array (
             'label' => 'Base de datos',
             'title' => '¿Quiéres ser voluntario o mantenerte informado? deja tus datos',

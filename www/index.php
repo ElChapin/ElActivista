@@ -9,7 +9,7 @@ include ('db.php');
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="El Activista se mueve">
-        <meta name="author" content="Sebastián Rojas. ALT24, Soluciones Informáticas">
+        <meta name="author" content="Sebastián Rojas">
         <meta property="fb:app_id" content="624795831021653" />
         <meta property="og:title" content="El Activista | El Chapín Prensa" />
         <meta property="og:description" content="El Activista se mueve" />
@@ -54,6 +54,7 @@ include ('db.php');
             <?php endif; ?>
         <?php endforeach; ?>
     </div>
+    <div>Hecho con <i class="fa fa-heart"></i> por voluntarios</div>
 </div>
 <script src="/lib/alertifyjs/dist/js/alertify.js"></script>
 </body>

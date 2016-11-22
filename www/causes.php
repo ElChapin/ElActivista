@@ -88,7 +88,7 @@ $cause = $causes[array_search($_GET['id'], array_column($causes, 'id'))];
                 </div>
                 <?php endif; ?>
                 <?php if (array_key_exists ('event', $cause)): ?>
-                <h1><span><?php echo $step++ ?></span> <?php echo $cause['event']['title'] ?></h1>
+                <h1><span><?php echo $step++ ?></span> Nos vemos en: <strong><?php echo $cause['event']['title'] ?></strong></h1>
                 <?php if (array_key_exists ('image', $cause['event'])): ?>
                 <a href="<?php echo $cause['event']['url'] ?>" target="_blank" class="facebook-event"><img class="img-responsive" src="/causes/<?php echo $cause['id'] ?>/img/<?php echo $cause['event']['image'] ?>"></a>
                 <?php endif; ?>
@@ -182,7 +182,7 @@ $cause = $causes[array_search($_GET['id'], array_column($causes, 'id'))];
         <a href="javascript:;" data-network="email"><i class="fa fa-paper-plane"></i></a>
     </li>
 </ul>
-
+<div>Hecho con <i class="fa fa-heart"></i> por voluntarios</div>
 <div id="loading">
     <div id="progress"></div>
 </div>
